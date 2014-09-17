@@ -1,9 +1,22 @@
-<h2>Friends list</h2>
-<h3>Number of friends {{ length }}</h3>
-<ul>
-	{{#each}}
-	<li>{{#link-to friend.fullName 'friends.show' this}} {{id}} {{firstName}} {{lastName}}</li>
-	{{/each}}
-</ul>
+<h1>Friends Index</h1>
+
+<h2>Friends: {{length}}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each}}
+      <tr>
+        <td>{{link-to fullName "friends.show" this}}</td>
+        <td><a href="#" {{action "delete" this}}>Delete</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 
 {{outlet}}
