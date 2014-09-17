@@ -1,0 +1,9 @@
+<h2>Friends list</h2>
+<h3>Number of friends {{ length }}</h3>
+<ul>
+	{{#each}}
+	<li>{{#link-to friend.fullName 'friends.show' this}} {{id}} {{firstName}} {{lastName}}</li>
+	{{/each}}
+</ul>
+
+{{outlet}}
