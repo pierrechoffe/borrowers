@@ -6,6 +6,19 @@ var app = new EmberApp();
 
 app.import('bower_components/picnic/latest.min.css');
 
+app.import('vendor/fontello/fontello.css');
+app.import('vendor/fontello/font/fontello.ttf', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.eot', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.svg', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.woff', {
+  destDir: 'font'
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
