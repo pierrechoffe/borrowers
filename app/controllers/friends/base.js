@@ -5,8 +5,7 @@ export default Ember.ObjectController.extend({
   hasFirstName: Ember.computed.notEmpty('firstName'),
   hasLastName:  Ember.computed.notEmpty('lastName'),
   hasTwitter:   Ember.computed.notEmpty('twitter'),
-  isValid: Ember.computed.and('hasEmail', 'hasFirstName', 'hasLastName', 'hasTwi\
-tter'),
+  isValid: Ember.computed.and('hasEmail','hasFirstName','hasLastName','hasTwitter'),
   actions: {
     save: function() {
       if (this.get('isValid')) {

@@ -8,7 +8,7 @@ export default DS.Model.extend({
   lastName:      DS.attr('string'),
   totalArticles: DS.attr('number'),
   twitter:       DS.attr('string'),
-  fullName: Ember.computed('firstName', 'lastName', function() {
+  fullName: Ember.computed('firstName','lastName', function() {
     return this.get('firstName') + ' ' + this.get('lastName');
   })
 });
